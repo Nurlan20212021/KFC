@@ -1,0 +1,141 @@
+﻿<Window x:Class="KFC.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KFC"
+        mc:Ignorable="d"
+        Title="Меню" Height="450" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BurgersBtn" Content="Бургеры" Click="BurgersBtn_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="photo/Бургеры.jpg"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="DesertsBtn" Grid.Row="1" Content="Десерты" Click="DesertsBtn_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="photo/Десерты.jpg"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="TvistersBtn" Grid.Row="2" Content="Твистеры" Click="TvistersBtn_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="photo/Твистеры.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="SnacksBtn" Grid.Row="3" Content="Картофель" Click="SnacksBtn_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="photo/Картофель.jpg"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <TextBox Name="Itog" Grid.Row="3" Visibility="Collapsed" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsReadOnly="True"></TextBox>
+        <StackPanel Name="FirstRowBurgers" Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <Button Name="BigBBtn" Width="70" Height="70" Content="Биг" Margin="0,0,10,0" Click="BigBBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Биг.jpg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="ZingerBBtn" Width="70" Height="70" Content="Зингер" Click="ZingerBBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Зингер.jpg"></ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel x:Name="FirstRowBurgersTBox" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+            <TextBlock Name="CostOfBig" Margin="0,0,40,0">215 р.</TextBlock>
+            <TextBlock Name="CostOfZinger">110 р.</TextBlock>
+        </StackPanel>
+        <Button Grid.Column="1" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="60" Background="Yellow" Margin="10" Click="Button_Click">Оплатить</Button>
+        <StackPanel Name="SecondRowBurgers" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <Button Name="HotSandersBBtn" Width="70" Height="70" Content="Сандерс(ост)" FontSize="11" Click="HotSandersBBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Сандерсост.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="SandersBBtn" Width="70" Height="70" Content="Сандерс" Click="SandersBBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Сандерспита.jpg"></ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel Name="SecondRowBurgersTBox" Orientation="Horizontal" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+            <TextBlock Name="CostOfHotSanders" Margin="0,0,40,0">135 р.</TextBlock>
+            <TextBlock Name="CostOfSanders" >135 р.</TextBlock>
+        </StackPanel>
+        <StackPanel Name="ThirdRowBurger" Orientation="Horizontal" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Name="BlackBBtn" Content="Тёмный" Width="70" Height="70" Click="BlackBBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Темный.jpg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Name="ChiefBBtn" Content="Шефбургер" Width="70" Height="70" Click="ChiefBBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Шефбургер.jpg"></ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel x:Name="ThirdRowBurgerTBox" Orientation="Horizontal" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <TextBlock Name="CostOfBlackBurger"  Margin="0,0,40,0">150 р.</TextBlock>
+            <TextBlock Name="CostOfChiefBurger" >170 р.</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Name="FirstRowDesert" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+            <Button x:Name="TropicDesertBtn" Width="70" Height="70" Content="Троп. десерт" FontSize="11" Click="TropicDesertBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Тропдесерт.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Name="TiramisuBtn" Width="70" Height="70" Content="Тирамису" Click="TiramisuBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Тирамису.jpg"></ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel Name="FirstRowDesertTBox" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Visibility="Collapsed">
+            <TextBlock Name="CostOfTropDesert"  Margin="0,0,40,0">109 р.</TextBlock>
+            <TextBlock  Name="CostOfTiramisu">99 р.</TextBlock>
+        </StackPanel>
+        <StackPanel Name="FirstRowTvister" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+            <Button Name="TvisterBtn" Width="70" Height="70" Content="Ориг.твистер" FontSize="10" Click="TvisterBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Твистеры.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Name="TvisterJuniorBtn" Width="70" Height="70" Content="Твистер джун." FontSize="10" Click="TvisterJuniorBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Твистер джун.jpg"></ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel Name="FirstRowTvisterTBOx" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1" Visibility="Collapsed">
+            <TextBlock Name="CostOfOrigTvister" Margin="0,0,40,0">159 р.</TextBlock>
+            <TextBlock Name="CostOfTvistJunior">99 р.</TextBlock>
+        </StackPanel>
+        <StackPanel Name="FirstRowSnacks" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+            <Button Name="FriBtn" Width="70" Height="70" Content="Фри" Click="FriBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/Картофель.jpg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Name="PoDerevenskiBtn" Width="70" Height="70" Content="По-деревенски" FontSize="9" Click="PoDerevenskiBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="photo/По-деревенски.jpg"></ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel Name="FirstRowSnacksTBOx" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Visibility="Collapsed">
+            <TextBlock  Margin="0,0,40,0">69 р.</TextBlock>
+            <TextBlock >79 р.</TextBlock>
+        </StackPanel>
+        <Image Name="logo" Source="photo/Логотип.jpg" Margin="10,2,230,111" RenderTransformOrigin="1.08,0.513" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBox x:Name="tbfin" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"></TextBox>
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="KFC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KFC"
+        mc:Ignorable="d"
+        Title="Терминал KFC" Height="450" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Source="photo/Логотип.jpg" Stretch="Fill"></Image>
+        <Image Source="photo/Логотип.jpg" Width="100" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top"></Image>
+        <Image Grid.Row="1" Source="photo/Середина.png" Stretch="Fill"></Image>
+        <Image Grid.Row="2" Source="photo/Акция.png" Stretch="Fill"></Image>
+        <Button Name="CreateOrderBtn" Grid.Row="1" Height="50" VerticalAlignment="Bottom" Opacity="0.5" FontSize="30" FontStyle="Italic" HorizontalContentAlignment="Center" FontFamily="Georgia" Click="CreateOrderBtn_Click">Сделать заказ</Button>
+    </Grid>
+</Window>
+
